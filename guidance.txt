@@ -1,0 +1,16 @@
+1. Hit temperature start button
+2. Send temperature number to arduino
+3. arduino starts PID loop and toggles heating element pin HIGH
+4. arduino sends a "heating element on" message to laptop
+5. jbrewcontrols toggles "heating element on" message
+6. arduino only sends the heating element status message when it toggles heating element pin
+7. jbrewcontrols appropriately sets the heating element message.
+8. when arduino reaches the initial target temperature, it sends a "target reached" message to laptop
+9. laptop uses a popup dialog to tell the user to start a timer
+10. user sets the timer for mashing.
+11. when mashing is complete, a popup dialog tells the user that mashout is going to begin.
+12. User hits "OK" in mashout dialog and the temperature starts raising to 167 degrees.
+13. when mashout temperature is reached, user is prompted to stop the pumps.
+14. the pumps are stopped, the outlet of the mash tun is run to the keg, the outlet of the hlt is connected to pump and then from pump to top of mash tun for sparging.  The herms pump and connections are disconnected.
+15. The sparge pump is activated. and heating is activated to stay at 167.
+16. once the hlt is empty everything is stopped!
